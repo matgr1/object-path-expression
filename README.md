@@ -1,6 +1,8 @@
 # object-path-expressions
 
-Adds type safety to functions that accept deep path arrays
+Adds type safety to functions that accept deep path arrays.
+
+The function "getObjectPath" accepts a path expression that can be used to select a deeply nested property and return a corresponding path array. The object passed to the path expression is a Proxy that ensures that nested properties can be accessed without throwing ReferenceErrors.  However, properties should ONLY be accessed once (this will be enforced when NODE_ENV is not "production").
 
 For example, given: 
 
@@ -36,14 +38,14 @@ let exampleObject: ExampleInterface = {
 };
 ```
 
-instead of this:
+Instead of this:
 
 ``` typescript
 let valueWithAnyType = pathArraysFunction(exampleObject, ["property1", "nestedProperty1"]);
 pathArraysFunction(exampleObject, ["invalidProperty1", "nestedProperty1"]); // ouch! runtime error
 ```
 
-we can do this:
+We can do this:
 
 ``` typescript
 import { getObjectPath, PathExpression } from "object-path-expression";
