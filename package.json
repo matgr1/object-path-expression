@@ -1,0 +1,27 @@
+{
+	"name": "object-path-expression",
+	"version": "1.0.2",
+	"keywords": [
+		"object-path",
+		"expression"
+	],
+	"author": "matgr1",
+	"license": "MIT",
+	"main": "dist/ObjectPathExpression.js",
+	"files": [
+		"dist/**/*"
+	],
+	"typings": "dist/ObjectPathExpression.d.ts",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/matgr1/object-path-expression"
+	},
+	"devDependencies": {
+		"typescript": "^2.4.2"
+	},
+	"dependencies": {},
+	"scripts": {
+		"build": "tsc -p ./tsconfig.json",
+		"prepublish": "npm run build"
+	}
+}
