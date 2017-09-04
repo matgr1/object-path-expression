@@ -2,7 +2,7 @@
 
 Adds type safety to functions that accept deep path arrays.
 
-The function "getObjectPath" accepts a path expression that can be used to select a deeply nested property and return a corresponding path array. The object passed to the path expression is a Proxy that ensures that nested properties can be accessed without throwing ReferenceErrors.  However, properties should ONLY be accessed once (this will be enforced when NODE_ENV is not "production").
+The function "getObjectPath" accepts a path expression that can be used to select a deeply nested property and return a corresponding path array. The object passed to the path expression is a Proxy that ensures that nested properties can be accessed without throwing ReferenceErrors.  However, properties should ONLY be accessed ONCE (this will be enforced when NODE_ENV is not "production").
 
 For example, given: 
 
