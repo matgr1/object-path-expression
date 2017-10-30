@@ -67,7 +67,7 @@ function createObjectPathProxy<T>(path: PropertyKey[]): ObjectPathProxy<T>
 	result.proxy = new Proxy<any>(
 		_proxyTarget,
 		{
-			get(target, propertyKey, reciever)
+			get(target, propertyKey, receiver)
 			{
 				if (process.env.NODE_ENV !== "production")	
 				{
